@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Login from './pages/Login';
+import Home from './pages/Home';
+import JobMonitor from './pages/JobMonitor';
+import Layout from './components/Layout';
+import JobSummary from './pages/JobSummary';
 import './App.css';
 
-function App() {
+const App = () => {
+  const token = useSelector((state) => state.auth.token);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {!token && <Route path="*" element={<Login/>} />}
+        {token && (
+          <Route element={<Layout/>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/job-monitor" element={<JobMonitor />} />
+            <Route path="/job-summary" element={<JobSummary />} />
+          </Route>
+        )}
+      </Routes>
+    </Router>
   );
 }
 
