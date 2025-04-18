@@ -1,0 +1,15 @@
+{
+    "valueSetId": 123,
+    "eventId": 456,
+    "eventValue01": "val01",
+    "eventValue02": "val02",
+    "eventValue03": "val03",
+    "eventValue04": "val04",
+    "eventValue05": "val05",
+    "eventValue06": "val06",
+    "eventValue07": "val07",
+    "eventValue08": "val08",
+    "eventValue09": "val09",
+    "eventValue10": "val10",
+    "active": false
+}

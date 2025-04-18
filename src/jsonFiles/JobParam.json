@@ -1,0 +1,14 @@
+{
+    "jobDefId": 123,
+    "jtParamId": 456,
+    "jobTypeId": 789,
+    "paramName": "threshold",
+    "paramValue": "100",
+    "paramDesc": "Limit@@",
+    "derivationExpr": "val + 20",
+    "jobParamDesc": "descValue$$",
+    "paramSubVarStr": "subV",
+    "processOrder": "1",
+    "override": false,
+    "global": true
+}

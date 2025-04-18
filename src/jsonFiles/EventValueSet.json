@@ -1,0 +1,16 @@
+{
+    "valueSetId": 1,
+    "valueSetName": "vsName",
+    "valueSetDesc": "someDesc",
+    "nbrColsRequired": 5,
+    "val01ColPrompt": "prompt01",
+    "val02ColPrompt": "prompt02",
+    "val03ColPrompt": "prompt03",
+    "val04ColPrompt": "prompt04",
+    "val05ColPrompt": "prompt05",
+    "val06ColPrompt": "prompt06",
+    "val07ColPrompt": "prompt07",
+    "val08ColPrompt": "prompt08",
+    "val09ColPrompt": "prompt09",
+    "val10ColPrompt": "prompt10"
+}

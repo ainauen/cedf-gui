@@ -1,0 +1,9 @@
+{
+    "jobDefId": "jd-xyz",
+    "cmPkgId": "cmpkg-001",
+    "codeCompleteDate": "2025-04-01T00:00:00Z",
+    "testCompleteDate": "2025-04-02T00:00:00Z",
+    "cmCompleteDate": "2025-04-03T00:00:00Z",
+    "comments": "justAComment@@",
+    "complByShortname": "cmplr123"
+}

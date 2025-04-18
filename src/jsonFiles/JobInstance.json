@@ -1,0 +1,15 @@
+{
+    "jobName": "abcJob",
+    "status": "running",
+    "fileName": "abc.csv",
+    "jobId": 789,
+    "parentJobId": 101,
+    "executions": 3,
+    "loadCount": 1000,
+    "failCount": 2,
+    "warningCount": 5,
+    "errorCount": 1,
+    "jobDefId": 606,
+    "startTime": "2025-04-04T07:00:00Z",
+    "completeTime": "2025-04-04T07:30:00Z"
+}

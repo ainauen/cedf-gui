@@ -1,0 +1,8 @@
+{
+    "id": 777,
+    "jobTypeId": 404,
+    "name": "dyn_sql_!",
+    "description": "desc_dsql",
+    "type": "tp*9",
+    "sql": "SELECT * FROM @@##"
+}

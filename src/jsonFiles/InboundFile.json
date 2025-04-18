@@ -1,0 +1,10 @@
+{
+    "fileName": "file_abc.txt",
+    "filePath": "/tmp/xyz/",
+    "processFlag": "Y",
+    "fileSizeBytes": 1048576,
+    "jobID": 4321,
+    "fileDate": "2025-04-04T10:00:00Z",
+    "fileQueueDate": "2025-04-04T11:00:00Z",
+    "fileArrivalId": 9999
+}

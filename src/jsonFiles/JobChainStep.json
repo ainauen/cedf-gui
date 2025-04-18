@@ -1,0 +1,11 @@
+{
+    "jobChainId": 101,
+    "chainStepId": 202,
+    "jobDefId": 303,
+    "parentJobDefId": 404,
+    "failJobDefId": 505,
+    "chainStepComments": "step@!comment",
+    "stepEnabledFlag": true,
+    "jobDefName": "doMainJob!",
+    "failJobDefName": "failOverJob#"
+}

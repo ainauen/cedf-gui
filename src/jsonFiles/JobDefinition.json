@@ -1,0 +1,15 @@
+{
+    "jobDefId": 6001,
+    "jobName": "Job_XYZ",
+    "jobDesc": "job description text here",
+    "jobTypeId": 789,
+    "lsId": 456,
+    "dataObjectId": 111,
+    "sourceDLId": 222,
+    "targetDLId": 333,
+    "dsId": 999,
+    "repeatInterval": "daily@2am",
+    "failCountTolPct": 0.05,
+    "warnCountTolPct": 0.1,
+    "errorCountTolPct": 0.15
+}

@@ -1,0 +1,7 @@
+{
+    "valueSetId": 1234,
+    "eventId": 5678,
+    "valueSetName": "vSet_xyz",
+    "eventName": "eName_abc",
+    "active": "true"
+}

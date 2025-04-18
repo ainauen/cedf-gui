@@ -1,0 +1,71 @@
+[
+    {
+        "userId": 7890,
+        "username": "user_abc",
+        "pwrd": "hidden!@#",
+        "lastLogin": "2025-04-01T09:00:00Z",
+        "lastLoginFail": "2025-04-01T09:05:00Z",
+        "accountDisabled": false,
+        "interfacesAccess": true,
+        "conversionsAccess": false,
+        "adminSetPass": true,
+        "roles": [
+            {
+                "id": 1,
+                "name": "userRole",
+                "key": "ROLE_USER"
+            },
+            {
+                "id": 2,
+                "name": "managerRole",
+                "key": "ROLE_MANAGER"
+            }
+        ]
+    },
+    {
+        "userId": 788,
+        "username": "ainauen",
+        "pwrd": "password",
+        "lastLogin": "2025-04-01T09:00:00Z",
+        "lastLoginFail": "2025-04-01T09:05:00Z",
+        "accountDisabled": false,
+        "interfacesAccess": true,
+        "conversionsAccess": false,
+        "adminSetPass": true,
+        "roles": [
+            {
+                "id": 1,
+                "name": "userRole",
+                "key": "ROLE_USER"
+            },
+            {
+                "id": 2,
+                "name": "managerRole",
+                "key": "ROLE_MANAGER"
+            }
+        ]
+    },
+    {
+        "userId": 789,
+        "username": "ametwoali",
+        "pwrd": "password",
+        "lastLogin": "2025-04-01T09:00:00Z",
+        "lastLoginFail": "2025-04-01T09:05:00Z",
+        "accountDisabled": false,
+        "interfacesAccess": true,
+        "conversionsAccess": false,
+        "adminSetPass": true,
+        "roles": [
+            {
+                "id": 1,
+                "name": "userRole",
+                "key": "ROLE_USER"
+            },
+            {
+                "id": 2,
+                "name": "managerRole",
+                "key": "ROLE_MANAGER"
+            }
+        ]
+    }
+]

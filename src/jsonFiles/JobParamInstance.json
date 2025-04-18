@@ -1,0 +1,13 @@
+{
+    "jobId": 9001,
+    "jobDefId": 8002,
+    "jtParamId": 7003,
+    "paramName": "maxVal",
+    "paramDesc": "desc##",
+    "paramSubVariableStr": "sub999",
+    "processOrder": 5,
+    "jobParamDesc": "jobPdesc!",
+    "paramValue": "9999",
+    "derivationExpr": "val - 100",
+    "paramValueFinal": "8899"
+}
