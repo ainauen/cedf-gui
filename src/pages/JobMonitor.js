@@ -2,8 +2,17 @@ import React, {useEffect, useState} from "react";
 import ApiService from "../services/ApiService";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Button, Form, Container, Table, InputGroup } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const JobMonitor = () => {
+    const [tableTheme, setTableTheme] = useState('light');
+    const [dropdownTitle, setDropdownTitle] = useState('Status');
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
     const token = useSelector((state) => state.auth.token);
     const user = useSelector((state) => state.auth.user);
     const [jobs, setJobs]= useState([]);
@@ -40,30 +49,80 @@ const JobMonitor = () => {
         fetchJobs();
     }, [token, user, navigate]);
 
+    const changeTheme = () =>{
+      if (tableTheme === 'light') {
+        setTableTheme('dark');
+      } else {
+        setTableTheme('light');
+
+
+      }
+    }
+
+    const handleChangeEndDate = (date, event) =>{
+      setEndDate(date)
+    }
+
+    const handleCSVButtonClick = () =>{
+      console.log("did something");
+    }
+
     return (
-        <div className="p-6">
-          <h1 className="text-2xl font-bold mb-6 text-gray-800">Job Monitor</h1>
+        <div className=' justify-content-center align-items-center'>
+          <h2 className="text-2xl font-bold mb-6 text-gray-800 align-text-center">Job Monitor</h2>
       
           {/* Filter Inputs (Optional enhancement: useState to track values) */}
-          <div className="flex flex-wrap gap-4 mb-6">
-            <input className="border rounded p-2 w-48" placeholder="Job Name" />
-            <input className="border rounded p-2 w-32" placeholder="Status" />
-            <input className="border rounded p-2" type="date" />
-            <input className="border rounded p-2" type="date" />
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Search</button>
-            <button className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">CSV</button>
+          <div className='d-flex'>
+            <InputGroup size="sm" className="mb-3">
+              <InputGroup.Text id="inputGroup-sizing-sm" >Job Name</InputGroup.Text>
+              <Form.Control
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" className='me-2'
+                style={{borderColor:'black'}}
+              />
+
+              <DropdownButton
+                variant="outline-secondary"
+                title={dropdownTitle}
+                id="input-group-dropdown-1"
+                className='me-2'
+              >
+                <Dropdown.Item href="#">C</Dropdown.Item>
+                <Dropdown.Item href="#">E</Dropdown.Item>
+                <Dropdown.Item href="#">N</Dropdown.Item>
+                <Dropdown.Item href="#">P</Dropdown.Item>
+                <Dropdown.Item href="#">S</Dropdown.Item>
+
+              </DropdownButton>
+
+              <InputGroup.Text id="inputGroup-sizing-sm" className='ms-2' >Start Date Begin</InputGroup.Text>
+              <DatePicker
+                    selected={startDate}
+                    onChange={handleChangeEndDate}
+                    className='me-2'
+                  />
+
+              <InputGroup.Text id="inputGroup-sizing-sm" >Start Date End</InputGroup.Text>
+              <DatePicker
+                selected={endDate}
+                onChange={handleChangeEndDate}
+                className='me-2'
+              />
+              </InputGroup>
+            <Button onClick={changeTheme} size='sm' variant='danger' style={{height:'30px'}}  className='me-2'>Search</Button>
+            <Button onClick={handleCSVButtonClick} size='sm' variant='danger' style={{height:'30px'}} >CVS</Button>
           </div>
       
           {/* Job Data Table */}
           <div className="overflow-x-auto">
-            <table className="min-w-full table-auto border-collapse border border-gray-300">
-              <thead className="bg-gray-100">
+            <Table striped shadow-lg bordered hover className='min-vw-90 shadow' variant={tableTheme}> 
+              <thead>
                 <tr>
                   {[
                     "Job Name", "Start Time", "Job ID", "Status",
                     "Complete Time", "Load", "Fail", "Warning", "Error", "File Name"
                   ].map((col) => (
-                    <th key={col} className="border px-4 py-2 text-left text-sm text-gray-700">{col}</th>
+                    <th key={col} style={{fontSize:'small'}}>{col}</th>
                   ))}
                 </tr>
               </thead>
@@ -74,22 +133,24 @@ const JobMonitor = () => {
                   </tr>
                 ) : (
                   jobs.map((job, index) => (
-                    <tr key={index} className="hover:bg-gray-50">
-                      <td className="border px-4 py-2">{job.name}</td>
-                      <td className="border px-4 py-2">{job.startTime}</td>
-                      <td className="border px-4 py-2">{job.jobId}</td>
-                      <td className="border px-4 py-2">{job.status}</td>
-                      <td className="border px-4 py-2">{job.completeTime}</td>
-                      <td className="border px-4 py-2">{job.load}</td>
-                      <td className="border px-4 py-2">{job.fail}</td>
-                      <td className="border px-4 py-2">{job.warning}</td>
-                      <td className="border px-4 py-2">{job.error}</td>
-                      <td className="border px-4 py-2">{job.fileName}</td>
+                    <tr key={index} >
+                      <td >{job.name}</td>
+                      <td >{job.startTime}</td>
+                      <td >{job.jobId}</td>
+                      <td >{job.status}</td>
+                      <td >{job.completeTime}</td>
+                      <td >{job.load}</td>
+                      <td >{job.fail}</td>
+                      <td >{job.warning}</td>
+                      <td >{job.error}</td>
+                      <td >{job.fileName}</td>
                     </tr>
                   ))
                 )}
               </tbody>
-            </table>
+            </Table>
+            <Button onClick={changeTheme} size='sm' variant='danger' style={{float: 'right'}}>Table Theme</Button>
+
           </div>
         </div>
       );
