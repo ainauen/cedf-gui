@@ -1,0 +1,28 @@
+[
+    {
+      "name": "ETL-Daily-Run",
+      "executions": 5,
+      "startTime": "2025-04-22T08:00:00Z"
+    },
+    {
+      "name": "UserSyncJob",
+      "executions": 3,
+      "startTime": "2025-04-22T09:30:00Z"
+    },
+    {
+      "name": "InventoryUpdater",
+      "executions": 1,
+      "startTime": "2025-04-22T07:00:00Z"
+    },
+    {
+      "name": "MonthlyBilling",
+      "executions": 6,
+      "startTime": "2025-04-20T01:00:00Z"
+    },
+    {
+      "name": "LogRotationJob",
+      "executions": 12,
+      "startTime": "2025-04-21T23:00:00Z"
+    }
+  ]
+  

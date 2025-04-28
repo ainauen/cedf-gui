@@ -36,7 +36,7 @@ const JobMonitor = () => {
 
         const fetchJobs = async () => {
             try {
-              const response = await fetch('/fake_jobs.json'); 
+              const response = await fetch('/fake_json_files/fake_jobs.json'); 
               const data = await response.json();
               setJobs(data);
             } catch {
@@ -69,7 +69,7 @@ const JobMonitor = () => {
 
     return (
         <div className=' justify-content-center align-items-center'>
-          <h2 className="text-2xl font-bold mb-6 text-gray-800 align-text-center">Job Monitor</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Job Monitor</h2>
       
           {/* Filter Inputs (Optional enhancement: useState to track values) */}
           <div className='d-flex'>
